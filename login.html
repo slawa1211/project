@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="id">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rumah Unggulan - Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous" />
+  <style>
+    body {
+      background-color: #f8f1e5;
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .main-content {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+
+
+    .Login-container {
+      background-color: white;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      padding: 30px;
+      width: 100%;
+      max-width: 400px;
+      margin: auto;
+    }
+
+
+    .textForm {
+      font-size: 14px;
+    }
+
+    .textJudul {
+      font-size: 22px;
+      font-weight: bold;
+      color: #333;
+    }
+
+
+    .text-hover {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .text-hover:hover {
+      text-decoration: none;
+      color: #0056b3;
+    }
+
+
+    footer {
+      flex-shrink: 0;
+    }
+
+    .form-control {
+      border: 1px solid gray;
+      border-radius: 5px;
+      box-shadow: none;
+    }
+
+    .form-control:focus {
+      border-color: grey;
+      box-shadow: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Konten utama -->
+  <div class="container main-content">
+    <form class="Login-container" id="formLogin">
+      <h3 class="textJudul mb-5 text-center">Masuk</h3>
+
+      <div class="mb-3">
+        <label for="email" class="form-label textForm">Email address</label>
+        <input type="email" class="form-control" id="email" placeholder="Masukkan email" required />
+      </div>
+
+      <div class="mb-3">
+        <label for="password" class="form-label textForm">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Masukkan password" required />
+      </div>
+
+      <div class="text-end">
+        <a href="lupapasword.html" class="textForm text-hover">Lupa Password</a>
+      </div>
+
+      <div class="d-grid textForm mt-4">
+        <button type="submit" class="btn btn-primary">Masuk</button>
+      </div>
+
+      <div class="mt-4">
+        <span class="textForm">Belum Punya Akun? <a href="Daftar.html" class="text-hover">Daftar</a></span>
+      </div>
+    </form>
+  </div>
+
+  <!-- Footer -->
+  <footer class="p-5 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col text-center">
+          <a href="#" class="text-decoration-none">
+            <img src="RUMAH/CP.png" style="width: 30px;" alt="Logo Footer" />
+          </a>
+          <span>
+            Copyright © 2025 | Created and Developed by
+            <a href="https://www.instagram.com/kelompok1b_rumah/"
+              class="text-decoration-none text-dark fw-bold">Kelompok 1B</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+
+  <script>
+    document.getElementById('formLogin').addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (email === "" || password === "") {
+        alert("Silakan isi email dan password!");
+        return;
+      }
+
+      alert("Login berhasil! Mengarahkan ke halaman beranda...");
+
+      window.location.href = "index.html";
+    });
+  </script>
+
+</body>
+
+</html>
